@@ -1,6 +1,6 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
+import SwapYen from "./components/swapYen";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <div className="text-3xl">Hi</div>
+      <div className="w-full flex items-center">
+        <SwapYen />
+      </div>
     </>
   );
 }
