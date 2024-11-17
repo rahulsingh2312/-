@@ -18,7 +18,7 @@ const App = () => {
             <div className="relative">
               {/* Rainbow background */}
               <img 
-                src="/rainbow.png"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0cdba8142219577.6262d4a37bc9a.gif"
                 alt="Rainbow background"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -35,7 +35,12 @@ const App = () => {
               <img
                 src="/mountRush.png"
                 alt="Mount Rushmore"
-                className="relative w-full h-auto"
+                className="relative hidden md:block w-full h-auto"
+              />
+               <img
+                src="/mrush.png"
+                alt="Mount Rushmore"
+                className="relative block  md:hidden w-full h-auto"
               />
   
               {/* Thought bubble */}
@@ -47,38 +52,58 @@ const App = () => {
                 
                 {/* Main bubble */}
                 <div className="
-   lg:w-[250px] lg:h-[150px] 
-  md:w-[200px] md:h-[120px]
-  w-[200px] h-[100px]
-  bg-white/60 rounded-full
-  border-4 border-[#E3E3E3]
-  backdrop-blur-[10.05px]
-  flex items-center justify-center">
-                  <span className="md:text-7xl text-5xl">💹</span>
-                </div>
+          relative
+          lg:w-[298px] lg:h-[181px]
+          md:w-[250px] md:h-[150px]
+          w-[200px] h-[120px]
+          flex-shrink-0
+          overflow-hidden
+          flex items-center justify-center
+        "
+        style={{
+          clipPath: 'ellipse(50% 50% at center)',
+          background: 'rgba(255, 255, 255, 0.6)',
+          // border: '4px solid #E3E3E3',
+          backdropFilter: 'blur(10.05px)',
+        }}>
+          <span className="flex items-center justify-center w-full h-full">
+            <img 
+              className="md:w-20 w-10" 
+              src="/yenemoji.png"
+              alt="Yen emoji"
+            />
+          </span>
+        </div>
+
   
                 {/* Medium bubble */}
                 <div className="absolute 
-                  lg:w-[53px] lg:h-[44px]
-                  md:w-[45px] md:h-[35px]
-                  w-[35px] h-[28px]
-                  lg:left-[-5px] lg:top-[155px]
-                  md:left-[-5px] md:top-[130px]
-                  left-[-5px] top-[100px]
-                  bg-white rounded-full" 
-                />
-  
-                {/* Small bubble */}
-                <div className="absolute 
-                  lg:w-[26px] lg:h-[24px]
-                  md:w-[22px] md:h-[20px]
-                  w-[18px] h-[16px]
-                  lg:left-[-28px] lg:top-[191px]
-                  md:left-[-25px] md:top-[160px]
-                  left-[-20px] top-[125px]
-                  bg-white rounded-full" 
-                />
-              </div>
+          lg:w-[53px] lg:h-[44px]
+          md:w-[45px] md:h-[35px]
+          w-[35px] h-[28px]
+          lg:left-[-5px] lg:top-[155px]
+          md:left-[-5px] md:top-[130px]
+          left-[-5px] top-[100px]
+        "
+        style={{
+          clipPath: 'ellipse(50% 50% at center)',
+          background: '#FFFFFF',
+        }} />
+
+        {/* Small bubble */}
+        <div className="absolute 
+          lg:w-[26px] lg:h-[24px]
+          md:w-[22px] md:h-[20px]
+          w-[18px] h-[16px]
+          lg:left-[-28px] lg:top-[191px]
+          md:left-[-25px] md:top-[160px]
+          left-[-20px] top-[125px]
+        "
+        style={{
+          clipPath: 'ellipse(50% 50% at center)',
+          background: '#FFFFFF',
+        }} />
+      </div>
             </div>
           </div>
         </main>
