@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from './Link';
-import Card from './hovercard';
+import CardRahul from './hovercardrahul';
+import CardRishabh from './hovercardrishabh';
 import { PiPawPrintFill } from "react-icons/pi";
 import { useState } from 'react';
+
 const PawPrint = ({ delay, index }) => (
   <div 
     className="absolute opacity-0"
@@ -10,11 +12,10 @@ const PawPrint = ({ delay, index }) => (
       animation: `pawStepAndFade 4s ease-in-out infinite`,
       animationDelay: `${delay}s`,
       left: `${10 + (index * 40)}px`,
-      // Alternate between higher and lower positions for zigzag effect
       top: `${index % 2 === 0 ? '18px' : '27px'}`
     }}
   >
-    <PiPawPrintFill color='white'  className="w-6 h-6  rotate-90  text-white " />
+    <PiPawPrintFill color='white' className="w-6 h-6 rotate-90 text-white" />
   </div>
 );
 
@@ -22,9 +23,32 @@ const Footer = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const creators = [
-    { name: 'rahulol', url: 'https://x.com/rrahulol' },
-    { name: 'rizzabh', url: 'https://x.com/rizz_abh' }
+    { 
+      name: 'rahulol', 
+      url: 'https://x.com/rrahulol',
+      CardComponent: CardRahul
+    },
+    { 
+      name: 'rizzabh', 
+      url: 'https://x.com/rizz_abh',
+      CardComponent: CardRishabh
+    }
   ];
+
+  const handleMouseEnter = (index) => {
+    setHoveredLink(index);
+  };
+
+  const handleMouseLeave = (index) => {
+    // Only close if we're not hovering the card
+    const card = document.querySelector(`#hover-card-${index}`);
+    if (card) {
+      const isHoveringCard = card.matches(':hover');
+      if (!isHoveringCard) {
+        setHoveredLink(null);
+      }
+    }
+  };
 
   return (
     <footer className="relative w-full h-[80px] bg-[#171717] shadow-[inset_0px_34px_69px_rgba(0,0,0,0.97)] flex justify-center items-center text-xl text-white text-opacity-40 px-16 py-1 max-md:px-5">
@@ -38,12 +62,23 @@ const Footer = () => {
         {creators.map((creator, index) => (
           <React.Fragment key={creator.name}>
             <span
-              onMouseEnter={() => setHoveredLink(index)}
-              onMouseLeave={() => setHoveredLink(null)}
               className="relative"
             >
-              <Link name={creator.name} url={creator.url} />
-              {hoveredLink === index && <Card  />}
+              <span
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                <Link name={creator.name} url={creator.url} />
+              </span>
+              {hoveredLink === index && (
+                <div 
+                  id={`hover-card-${index}`}
+                  onMouseLeave={() => setHoveredLink(null)}
+                  className="absolute z-50"
+                >
+                  <creator.CardComponent />
+                </div>
+              )}
             </span>
             {index < creators.length - 1 && ' & '}
           </React.Fragment>

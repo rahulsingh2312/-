@@ -23,9 +23,9 @@ export default function Matrix() {
           {/* <p className="text-white text-lg sm:text-xl opacity-90">
             you can be the next
           </p> */}
-          <p className="text-white mt-10 mb-3  sm:text-xl opacity-90 
-  w-[230px] h-[26px] 
-  font-[Trap] font-medium text-2xl leading-[26px] 
+          <p className="text-white mt-10 mb-3   opacity-90 
+  w-[208px] h-[26px] 
+  font-[Trap] font-medium md:text-xl text-sm leading-[26px] 
   bg-gradient-to-r from-white/30 via-white/20 to-white/0 
   border border-white/50 rounded-full
   bg-opacity-20 
