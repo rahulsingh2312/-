@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import SwapYen from "./components/swapYen";
 import Footer from "./components/Footer";
-
+import RainbowMountain from "./components/rainbowmountain";
 import "./App.css";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className="h-screen">
+      <RainbowMountain />
       <SwapYen />
       <Footer />
     </div>
