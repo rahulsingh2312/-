@@ -4,6 +4,7 @@ import SwapYen from "./components/swapYen";
 import Footer from "./components/Footer";
 import RainbowMountain from "./components/rainbowmountain";
 import Matrix from "./components/matrix";
+import WallOfMeme from "./components/wallofmeme";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <RainbowMountain />
       <Matrix />
       <SwapYen />
+      <WallOfMeme />
       <Footer />
     </div>
   );

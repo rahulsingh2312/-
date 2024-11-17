@@ -1,54 +1,72 @@
 import React from 'react';
+import { X, Send } from 'lucide-react';
 
 export default function Matrix() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="/matrix.png"
-        alt="Matrix"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      />
+      {/* Background with Matrix style binary */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black">
+        <img
+          src="/matrix.png"
+          alt="Matrix"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+        />
+      </div>
       
       {/* Content Container */}
       <div className="relative z-10 w-full h-full flex flex-col">
-        {/* Heading */}
-        <div className="text-center mt-4 sm:mt-8">
-          <h1 className="text-4xl font-bold text-white">Your Heading Here</h1>
+        {/* Main Text */}
+        <div className="text-center mt-8 px-4">
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
+            Stop Trading & Believe in Something
+          </h1>
+          <p className="text-white text-lg sm:text-xl opacity-90">
+            you can be the next
+          </p>
         </div>
-        
-        {/* Bottom images container */}
-        <div className=" flex -mb-40  justify-between items-end">
-          {/* Left image */}
-          <img
-            src="/Waifu.png"
-            alt="Waifu"
-            className="w-[33%] -mb-40  object-contain"
-          />
-          
-          {/* Center image with text */}
-          <div className="flex  w-[33%] flex-col items-center">
-            <div className="flex flex-col items-center mb-4 space-y-2 px-2">
-              <div className="text-white text-sm sm:text-xl text-center">
-                First text block above Cutudog
-              </div>
-              <div className="text-white text-sm sm:text-xl text-center">
-                Second text block above Cutudog
-              </div>
-            </div>
-            <img
-              src="/Cutudog.png"
-              alt="Cutudog"
-              className=" object-contain"
-            />
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-4 mt-4">
+          {/* X (Twitter) Circle */}
+          <div className="rounded-full bg-black p-3 cursor-pointer hover:bg-gray-900 transition-colors">
+            <X className="w-6 h-6 text-white" />
           </div>
           
-          {/* Right image */}
-          <img
-            src="/Khali.png"
-            alt="Khali"
-            className="w-[43%] -mb-40 object-contain"
-          />
+          {/* Telegram Circle */}
+          <div className="rounded-full bg-[#0088cc] p-3 cursor-pointer hover:opacity-90 transition-opacity">
+            <Send className="w-6 h-6 text-white" />
+          </div>
+        </div>
+
+        {/* Bottom Images Container */}
+        <div className="mt-auto flex justify-between items-end">
+          {/* Left Waifu */}
+          <div className="w-1/3">
+            <img
+              src="/Waifu.png"
+              alt="Anime character"
+              className="h-[60vh] object-contain"
+            />
+          </div>
+
+          {/* Center Dog with Trading Icon */}
+          <div className="w-1/3 flex flex-col items-center">
+           
+            <img
+              src="/Cutudog.png"
+              alt="Shiba dog"
+              className="h-[40vh] object-contain"
+            />
+          </div>
+
+          {/* Right Figure */}
+          <div className="w-1/3 flex justify-end">
+            <img
+              src="/Khali.png"
+              alt="Muscular figure"
+              className="h-[60vh] object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
