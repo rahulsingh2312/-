@@ -26,7 +26,7 @@ const Navbar = () => {
             <TokenIcon src="/x2.png" />
           </a>
         </div>
-       <div className='z-[999999991000] hidden md:block'>
+       {/* <div className='z-[999999991000] hidden md:block'>
        <WalletMultiButton  className='' style={{
           background: "#A9F605",
           color: "black",
@@ -43,9 +43,9 @@ const Navbar = () => {
           height: "40px",
          width:"80px"
         }} />
-        </div>
+        </div> */}
 
-        {/* <BuyButton /> */}
+        <BuyButton />
       </div>
     </section>
   );

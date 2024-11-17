@@ -17,18 +17,33 @@
 }
 @media (max-width: 800px) {
     .wallet-adapter-button {
-        font-size: 6px;
+        font-size: 8px;
         height: 36px;
         line-height: 6px;
         padding: 0 12px;
     }}
+    @media (max-width: 325px) {
+        .wallet-adapter-button {
+            font-size: 6px;
+            height: 36px;
+            line-height: 6px;
+            padding: 0 12px;
+        }}
+        @media (max-width: 321px) {
+            .wallet-adapter-button {
+                font-size: 2px;
+                height: 36px;
+                line-height: 6px;
+                padding: 0 12px;
+            }}
 @media (max-width: 480px) {
     .wallet-adapter-button {
-        font-size: 2px;
+        font-size: 8px;
         height: 36px;
         line-height: 6px;
         padding: 0 12px;
     }
+    
 
     .wallet-adapter-button-end-icon,
     .wallet-adapter-button-start-icon,
@@ -38,13 +53,13 @@
         height: 20px;
     }
 
-    .wallet-adapter-button-end-icon {
+    /* .wallet-adapter-button-end-icon {
         margin-left: 8px;
     }
 
     .wallet-adapter-button-start-icon {
         margin-right: 8px;
-    }
+    } */
 
     /* Modal adjustments */
     .wallet-adapter-modal-container {

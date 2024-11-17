@@ -9,7 +9,7 @@ const App = () => {
        
         
         {/* Main content */}
-        <main className="relative z-10 md:-mt-24 -mt-36 ">
+        <main className="relative z-10 md:-mt-24 -mt-44 ">
           <div className="relative w-full">
             {/* Container for mountain background elements */}
             <div className="relative">
