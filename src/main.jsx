@@ -11,26 +11,25 @@ import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 // import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
 import { TipLinkWalletAdapter } from "@tiplink/wallet-adapter";
-import { WalletModalProvider, TipLinkWalletAutoConnectV2, WalletMultiButton } from '@tiplink/wallet-adapter-react-ui';
-
+import {
+  WalletModalProvider,
+  WalletDisconnectButton,
+  WalletMultiButton,
+  TipLinkWalletAutoConnectV2
+} from '@tiplink/wallet-adapter-react-ui';  
 // import '@solana/wallet-adapter-react-ui/styles.css';
-const wallets = [
-  new TipLinkWalletAdapter({
-    title: "Emoji Buy",
-    clientId: "f7d3033a-a221-42e2-b8cb-0b73c1bc3c27",
-    theme: "light",
-    hideDraggableWidget: false
-  }),
-];
+
 function Root() {
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-  const wallets = useMemo(
-    () => [
-      // Add your wallet adapters here
-    ],
-    [network]
-  );
+  const wallets = [
+    new TipLinkWalletAdapter({
+      title: "yen 💹",
+      clientId: "f7d3033a-a221-42e2-b8cb-0b73c1bc3c27",
+      theme: "dark",
+      hideDraggableWidget: false
+    }),
+  ];
 
   return (
     <StrictMode>
@@ -48,7 +47,6 @@ function Root() {
                
               </div>
             </div>
-            <WalletMultiButton />
           </WalletModalProvider>
           </TipLinkWalletAutoConnectV2>
     )}
