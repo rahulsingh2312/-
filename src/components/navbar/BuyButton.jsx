@@ -1,9 +1,15 @@
 import React from 'react';
-
+import { WalletMultiButton } from '@tiplink/wallet-adapter-react-ui';
 const BuyButton = () => {
   return (
-    <button className="overflow-hidden self-start px-3 md:px-5 py-1.5 md:py-2 text-[10px] md:text-xs font-black text-black bg-white rounded-[20px] md:rounded-[31px]">
-      BUY YEN
+    <button className="overflow-hidden z-[99999999] self-start ">
+      <WalletMultiButton   style={{
+          background: "#A9F605",
+          color: "black",
+          borderRadius: "1000px",
+          height: "40px",
+          width: "150px",
+        }} />
     </button>
   );
 };

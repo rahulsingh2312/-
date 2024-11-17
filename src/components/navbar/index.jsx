@@ -1,7 +1,9 @@
 
 import TokenIcon from './TokenIcon.jsx';
 import BuyButton from './BuyButton';
-
+import { WalletMultiButton } from "@tiplink/wallet-adapter-react-ui";
+// import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import "@solana/wallet-adapter-react-ui/styles.css";
 
 const Navbar = () => {
   return (
@@ -16,6 +18,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-2 md:gap-3.5">
         <div className="flex gap-1.5 md:gap-2.5 items-center">
+  
           <a target='_blank' href='https://t.me/YENonSol'>
             <TokenIcon src="/t2.png" />
           </a>
@@ -23,7 +26,26 @@ const Navbar = () => {
             <TokenIcon src="/x2.png" />
           </a>
         </div>
-        <BuyButton />
+       <div className='z-[999999991000] hidden md:block'>
+       <WalletMultiButton  className='' style={{
+          background: "#A9F605",
+          color: "black",
+          borderRadius: "1000px",
+          height: "40px",
+        
+        }} />
+        </div>
+        <div className='z-[999999991000] md:hidden block'>
+       <WalletMultiButton  className='' style={{
+          background: "#A9F605",
+          color: "black",
+          borderRadius: "1000px",
+          height: "40px",
+         width:"80px"
+        }} />
+        </div>
+
+        {/* <BuyButton /> */}
       </div>
     </section>
   );

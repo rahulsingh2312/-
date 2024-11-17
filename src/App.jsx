@@ -6,7 +6,7 @@ import RainbowMountain from "./components/rainbowmountain";
 import Matrix from "./components/matrix";
 import WallOfMeme from "./components/wallofmeme";
 import ActualFooter from "./components/ActualFooter";
-
+import Navbar from "./components/navbar";
 import "./App.css";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="h-screen">
+     
       <RainbowMountain />
       <Matrix />
       <SwapYen />

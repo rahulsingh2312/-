@@ -2,14 +2,11 @@
 // part 1 rainbow gif in background
 // part 2 mount rushmore image
 // part 3 thinking about yen emoji by 2nd guy in mount rushmore image
-import Navbar from "../navbar";
 const App = () => {
     return (
       <div className="min-h-screen relative">
         {/* Sticky navbar */}
-        <div className="sticky top-0 z-30 px-4 pt-4">
-          <Navbar />
-        </div>
+       
         
         {/* Main content */}
         <main className="relative z-10 md:-mt-24 -mt-36 ">
