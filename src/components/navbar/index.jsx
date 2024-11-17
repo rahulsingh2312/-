@@ -5,7 +5,7 @@ import BuyButton from './BuyButton';
 
 const Navbar = () => {
   return (
-    <section className="flex mx-auto justify-between overflow-hidden flex-wrap gap-5 md:gap-10 px-3 md:px-5 py-2 md:py-3 border border-solid bg-zinc-600 bg-opacity-20 border-white border-opacity-10 max-w-[939px] lg:ounded-[31px] md:rounded-[31px] rounded-[20px]">
+    <section className="flex mx-auto justify-between overflow-hidden flex-wrap gap-5 md:gap-10 px-3 md:px-5 py-2 md:py-3 border border-solid bg-zinc-600 bg-opacity-20 border-white border-opacity-10 max-w-[939px] lg:ounded-[31px] md:rounded-[31px] rounded-[20px]   backdrop-blur-md">
       <div className="flex gap-1 md:gap-1.5 items-center my-auto text-sm md:text-base text-white whitespace-nowrap">
         <span className="self-stretch my-auto text-sm md:text-base" aria-hidden="true"><img 
               className="md:w-5 w-4 mx-2" 
