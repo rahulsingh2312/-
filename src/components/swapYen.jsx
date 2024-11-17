@@ -76,7 +76,7 @@ const SwapYen = () => {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex w-full justify-between my-2">
+      <div className="flex w-full items-center justify-center mx-auto my-2">
         {!walletConnected ? (
           <button
             onClick={handleConnectWallet}
