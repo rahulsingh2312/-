@@ -16,3 +16,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.barrio-regular {
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
