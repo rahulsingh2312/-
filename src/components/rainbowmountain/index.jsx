@@ -12,7 +12,7 @@ const App = () => {
         </div>
         
         {/* Main content */}
-        <main className="relative z-10 -mt-24 ">
+        <main className="relative z-10 md:-mt-24 -mt-36 ">
           <div className="relative w-full">
             {/* Container for mountain background elements */}
             <div className="relative">
@@ -33,21 +33,21 @@ const App = () => {
               
               {/* Mount Rushmore */}
               <img
-                src="/mountRush.png"
+                src="/rai.png"
                 alt="Mount Rushmore"
-                className="relative hidden md:block w-full h-auto"
+                className="relative  hidden md:block w-full h-auto"
               />
                <img
-                src="/mrush.png"
+                src="/raiph.png"
                 alt="Mount Rushmore"
-                className="relative block  md:hidden w-full h-auto"
+                className="relative block mt-20  md:hidden w-full h-auto"
               />
   
               {/* Thought bubble */}
               <div className="absolute 
-                lg:left-[740px] lg:top-[139px]
+                
                 md:left-1/2 md:top-[100px]
-                left-1/2 top-[80px]
+                left-[70%] top-[100px]
                 transform -translate-x-1/2 md:-translate-x-0">
                 
                 {/* Main bubble */}
@@ -55,16 +55,17 @@ const App = () => {
           relative
           lg:w-[298px] lg:h-[181px]
           md:w-[250px] md:h-[150px]
-          w-[200px] h-[120px]
+          w-[120px] h-[80px]
           flex-shrink-0
           overflow-hidden
+          md:border-4 border-2 border-white
           flex items-center justify-center
         "
         style={{
           clipPath: 'ellipse(50% 50% at center)',
           background: 'rgba(255, 255, 255, 0.6)',
-          // border: '4px solid #E3E3E3',
-          backdropFilter: 'blur(10.05px)',
+borderRadius:"100%"       ,
+   backdropFilter: 'blur(10.05px)',
         }}>
           <span className="flex items-center justify-center w-full h-full">
             <img 
@@ -82,8 +83,8 @@ const App = () => {
           md:w-[45px] md:h-[35px]
           w-[35px] h-[28px]
           lg:left-[-5px] lg:top-[155px]
-          md:left-[-5px] md:top-[130px]
-          left-[-5px] top-[100px]
+          md:left-[5px] md:top-[130px]
+          right-[55px] top-[100px]
         "
         style={{
           clipPath: 'ellipse(50% 50% at center)',
@@ -97,7 +98,7 @@ const App = () => {
           w-[18px] h-[16px]
           lg:left-[-28px] lg:top-[191px]
           md:left-[-25px] md:top-[160px]
-          left-[-20px] top-[125px]
+          right-[100px] top-[125px]
         "
         style={{
           clipPath: 'ellipse(50% 50% at center)',
