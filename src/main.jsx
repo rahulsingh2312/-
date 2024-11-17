@@ -11,6 +11,7 @@ import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 // import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { clusterApiUrl } from "@solana/web3.js";
 import { TipLinkWalletAdapter } from "@tiplink/wallet-adapter";
+import './wallet.css';
 import {
   WalletModalProvider,
   WalletDisconnectButton,

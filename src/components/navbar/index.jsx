@@ -3,7 +3,7 @@ import TokenIcon from './TokenIcon.jsx';
 import BuyButton from './BuyButton';
 import { WalletMultiButton } from "@tiplink/wallet-adapter-react-ui";
 // import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import "@solana/wallet-adapter-react-ui/styles.css";
+// import "@solana/wallet-adapter-react-ui/styles.css";
 
 const Navbar = () => {
   return (

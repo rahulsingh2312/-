@@ -4,7 +4,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { useSingleTokenSwap } from './useSingleTokenSwap';
 import { WalletMultiButton } from "@tiplink/wallet-adapter-react-ui";
 import { Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
-import '@solana/wallet-adapter-react-ui/styles.css';
+// import '@solana/wallet-adapter-react-ui/styles.css';
 
 
 const SwapYen = ({ isDarkMode = true }) => {
@@ -82,7 +82,7 @@ const SwapYen = ({ isDarkMode = true }) => {
 
   const handleSwap = async () => {
     if (!walletConnected) {
-      return;
+      alert('Please connect your wallet.');
     }
 
     if (swapAmount <= 0) {
