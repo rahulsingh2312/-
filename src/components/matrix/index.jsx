@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Send } from 'lucide-react';
-
+import TokenIcon from './TokenIcon';
 export default function Matrix() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
@@ -20,22 +20,41 @@ export default function Matrix() {
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
             Stop Trading & Believe in Something
           </h1>
-          <p className="text-white text-lg sm:text-xl opacity-90">
+          {/* <p className="text-white text-lg sm:text-xl opacity-90">
             you can be the next
-          </p>
+          </p> */}
+          <p className="text-white mt-10 mb-3  sm:text-xl opacity-90 
+  w-[230px] h-[26px] 
+  font-[Trap] font-medium text-2xl leading-[26px] 
+  bg-gradient-to-r from-white/30 via-white/20 to-white/0 
+  border border-white/50 rounded-full
+  bg-opacity-20 
+  backdrop-blur-md mx-auto
+  flex items-center justify-center px-[22px] py-[22px] gap-[10px] 
+ ">
+              you can be the next
+
+  </p>
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center gap-4 mt-4">
-          {/* X (Twitter) Circle */}
+        {/* <div className="flex justify-center gap-4 mt-4">
           <div className="rounded-full bg-black p-3 cursor-pointer hover:bg-gray-900 transition-colors">
             <X className="w-6 h-6 text-white" />
           </div>
           
-          {/* Telegram Circle */}
           <div className="rounded-full bg-[#0088cc] p-3 cursor-pointer hover:opacity-90 transition-opacity">
             <Send className="w-6 h-6 text-white" />
           </div>
+        </div> */}
+          <div className="flex justify-center gap-4 mt-4">
+         
+          <a target='_blank' href='https://x.com/i/communities/1854412179182645683'>
+            <TokenIcon src="/x2.png" />
+          </a>
+          <a target='_blank' href='https://t.me/YENonSol'>
+            <TokenIcon src="/t2.png" />
+          </a>
         </div>
 
         {/* Bottom Images Container */}
