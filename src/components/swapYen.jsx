@@ -1,12 +1,13 @@
 import React from "react";
 import { CgChevronRight } from "react-icons/cg";
+import BulkTokenSwapButton from "./bulkTokenSwapButton";
 
 const swapYen = () => {
   return (
     <>
       {/* //from */}
       <div className="flex-col mx-auto my-4">
-        <div className="bg-[#232323] p-4 rounded-3xl w-[543px]">
+        <div className="bg-[#232323] p-4 rounded-3xl min-w-[543px] max-sm:min-w-[310px] ">
           <div className="w-full flex justify-between items-center px-2 mb-2">
             <h1 className="font-medium text-white/25">Swap from</h1>
 
@@ -27,16 +28,23 @@ const swapYen = () => {
             </div>
           </div>
         </div>
+        <div className="flex w-full justify-between my-2">
+          <button className="bg-white hover:bg-green-500 text-black text-sm font-semibold px-4 py-1 rounded-xl">
+            Connect Wallet
+          </button>
+          <button className="bg-green-500 hover:bg-white text-black text-sm font-semibold px-4 py-1 rounded-xl">
+            Swap{"->"}
+          </button>
+        </div>
 
-        <div className="rounded-full bg-white border border-[#171717] p-4 w-fit mx-auto"></div>
         {/* //to  */}
-        <div className="flex-col mx-auto my-4">
-          <div className="bg-gradient-to-b from-[#0A4A00] to-[#073000] p-4 rounded-3xl w-[543px]">
+        <div className="flex-col mx-auto mb-4">
+          <div className="bg-gradient-to-b from-[#0A4A00] to-[#073000] p-4 rounded-3xl">
             <div className="w-full flex justify-between items-center px-2 mb-2">
-              <h1 className="font-medium text-white/25">Swap from</h1>
+              <h1 className="font-medium text-white/25">To</h1>
 
-              <div className="border rounded-full border-gray-600 px-2 py-1 flex items-center">
-                <span>SOL</span> <CgChevronRight />
+              <div className="border rounded-full bg-white px-2 py-1 flex items-center">
+                <span className="text-black font-semibold">YEN 💹</span>
               </div>
             </div>
             <div className="flex gap-4 items-end mb-4 border-b border-b-zinc-700 pb-6">
