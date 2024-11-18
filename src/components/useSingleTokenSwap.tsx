@@ -13,7 +13,7 @@ import { Buffer } from 'buffer';
 
 const SOL_MINT = 'So11111111111111111111111111111111111111112';
 const connection = new Connection(
-  'https://mainnet.helius-rpc.com/?api-key=215399cd-1d50-4bdf-8637-021503ae6ef3',
+  'https://mainnet.helius-rpc.com/?api-key=1c4915ef-e7f3-4cdb-b032-1a126a058ff8',
   "confirmed"
 );
 const jupiterQuoteApi = createJupiterApiClient();
