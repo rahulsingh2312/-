@@ -53,7 +53,7 @@ export const useSingleTokenSwap = () => {
         inputMint: SOL_MINT,
         outputMint: tokenAddress,
         amount: amountInLamports,
-        slippageBps: 50, // 0.5% slippage tolerance
+        slippageBps: 150, // 0.5% slippage tolerance
       };
 
       const quote = await jupiterQuoteApi.quoteGet(quoteParams);
