@@ -74,11 +74,6 @@ const SwapYen = ({ isDarkMode = true }) => {
     }
   }, [swapAmount, tokenPrice]);
 
-  const handleMaxClick = () => {
-    // Ensure we leave enough for fees
-    const maxAmount = Math.max(0, availableBalance - estimatedFees);
-    setSwapAmount(Number(maxAmount.toFixed(9))); // Format to 9 decimal places for SOL
-  };
 
   const handleSwap = async () => {
     if (!walletConnected) {
@@ -86,14 +81,11 @@ const SwapYen = ({ isDarkMode = true }) => {
     }
 
     if (swapAmount <= 0) {
-      alert("Invalid swap amount.");
+      alert("how to swap 0 SOL? actually why to swap 0 SOL?");
       return;
     }
 
-    if (swapAmount + estimatedFees > availableBalance) {
-      alert("Insufficient balance including fees.");
-      return;
-    }
+
 
     try {
       await executeSwap(swapAmount);
@@ -140,7 +132,7 @@ const SwapYen = ({ isDarkMode = true }) => {
             }`}
             placeholder="0.00"
             min="0"
-            step="0.000000001"
+            step="0.1"
             disabled={loading}
           />
         </div>
