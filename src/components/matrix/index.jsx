@@ -1,92 +1,41 @@
-import React from 'react';
-import { X, Send } from 'lucide-react';
-import TokenIcon from './TokenIcon';
+import React from "react";
+// import { X, Send } from "lucide-react";
+import TokenIcon from "./TokenIcon";
 export default function Matrix() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
-      {/* Background with Matrix style binary */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black">
-        <img
-          src="/matrix.png"
-          alt="Matrix"
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
-        />
-      </div>
-      
-      {/* Content Container */}
-      <div className="relative z-10 w-full h-full flex flex-col">
-        {/* Main Text */}
-        <div className="text-center mt-8 px-4">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-2">
-            Stop Trading & Believe in Something
+    <div>
+      <div className="h-full w-full relative flex-col items-center justify-center">
+        <div className="flex-col items-center justify-center absolute w-full mt-20 max-lg:mt-1">
+          <h1 className="text-6xl text-center font-bold z-10 mx-auto mb-6 max-xl:text-5xl max-lg:text-4xl">
+            Stop Trading & Believe in something
           </h1>
-          {/* <p className="text-white text-lg sm:text-xl opacity-90">
-            you can be the next
-          </p> */}
-          <p className="text-white mt-10 mb-3   opacity-90 
-  w-[208px] h-[26px] 
-  font-[Trap] font-medium md:text-xl text-sm leading-[26px] 
-  bg-gradient-to-r from-white/30 via-white/20 to-white/0 
-  border border-white/50 rounded-full
-  bg-opacity-20 
-  backdrop-blur-md mx-auto
-  flex items-center justify-center px-[22px] py-[22px] gap-[10px] 
- ">
-              you can be the next
-
-  </p>
-        </div>
-
-        {/* Social Media Icons */}
-        {/* <div className="flex justify-center gap-4 mt-4">
-          <div className="rounded-full bg-black p-3 cursor-pointer hover:bg-gray-900 transition-colors">
-            <X className="w-6 h-6 text-white" />
+          <div className="px-4 py-1 rounded-full border border-gray-500 mx-auto  text-center z-10 bg-white/20 backdrop-blur-sm w-fit">
+            You can be the next "MillYENaire"
           </div>
-          
-          <div className="rounded-full bg-[#0088cc] p-3 cursor-pointer hover:opacity-90 transition-opacity">
-            <Send className="w-6 h-6 text-white" />
-          </div>
-        </div> */}
           <div className="flex justify-center gap-4 mt-4">
-         
-          <a target='_blank' href='https://x.com/i/communities/1854412179182645683'>
-            <TokenIcon src="/x2.png" />
-          </a>
-          <a target='_blank' href='https://t.me/YENonSol'>
-            <TokenIcon src="/t2.png" />
-          </a>
-        </div>
-
-        {/* Bottom Images Container */}
-        <div className="mt-auto flex justify-between items-end">
-          {/* Left Waifu */}
-          <div className="w-1/3">
-            <img
-              src="/Waifu.png"
-              alt="Anime character"
-              className="h-[60vh] object-contain"
-            />
-          </div>
-
-          {/* Center Dog with Trading Icon */}
-          <div className="w-1/3 flex flex-col items-center">
-           
-            <img
-              src="/Cutudog.png"
-              alt="Shiba dog"
-              className="h-[40vh] object-contain"
-            />
-          </div>
-
-          {/* Right Figure */}
-          <div className="w-1/3 flex justify-end">
-            <img
-              src="/Khali.png"
-              alt="Muscular figure"
-              className="h-[60vh] object-contain"
-            />
+            <a
+              target="_blank"
+              href="https://x.com/i/communities/1854412179182645683"
+            >
+              <TokenIcon src="/x2.png" />
+            </a>
+            <a target="_blank" href="https://t.me/YENonSol">
+              <TokenIcon src="/t2.png" />
+            </a>
           </div>
         </div>
+        <img
+          src="/stoptrading.png"
+          className="select-none max-md:hidden -z-10"
+          draggable="false"
+          alt=""
+        />
+        <img
+          src="/stoptradingmd.png"
+          className="select-none md:hidden w-full -z-10"
+          draggable="false"
+          alt=""
+        />
       </div>
     </div>
   );
