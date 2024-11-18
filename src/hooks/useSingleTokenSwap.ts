@@ -12,7 +12,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 
 const SOL_MINT = 'So11111111111111111111111111111111111111112';
 const connection = new Connection(
-  'https://mainnet.helius-rpc.com/?api-key=1c4915ef-e7f3-4cdb-b032-1a126a058ff8',
+  import.meta.env.VITE_RPC_URL,
   "confirmed"
 );
 const jupiterQuoteApi = createJupiterApiClient();
