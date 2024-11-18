@@ -1,19 +1,31 @@
 import React from "react";
 import MemeImage from "./MemeImage";
-import { useState , useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const memeImages = [
-  { src: "/soldier.png", alt: "Meme image 1", className: "rounded-2xl aspect-[1.2] min-w-[240px] w-[346px]" },
-  { src: "/rocket.png", alt: "Meme image 2", className: "aspect-square min-w-[240px] rounded-[30px] w-[440px] max-md:max-w-full" },
-  { src: "/samurai.png", alt: "Meme image 3", className: "rounded-3xl aspect-[1.04] min-w-[240px] w-[314px]" }
+  {
+    src: "/soldier.webp",
+    alt: "Meme image 1",
+    className: "rounded-2xl aspect-[1.2] min-w-[240px] w-[346px]",
+  },
+  {
+    src: "/rocket.webp",
+    alt: "Meme image 2",
+    className:
+      "aspect-square min-w-[240px] rounded-[30px] w-[440px] max-md:max-w-full",
+  },
+  {
+    src: "/samurai.webp",
+    alt: "Meme image 3",
+    className: "rounded-3xl aspect-[1.04] min-w-[240px] w-[314px]",
+  },
 ];
 
 function WallOfMeme() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  
+
   // Auto-scroll functionality
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,7 +46,9 @@ function WallOfMeme() {
   const prevSlide = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setCurrentIndex((prev) => (prev - 1 + memeImages.length) % memeImages.length);
+      setCurrentIndex(
+        (prev) => (prev - 1 + memeImages.length) % memeImages.length
+      );
       setTimeout(() => setIsAnimating(false), 300);
     }
   };
@@ -43,9 +57,10 @@ function WallOfMeme() {
     <main className="min-h-screen flex flex-col items-center justify-center p-4 relative">
       <header className="text-center mb-12">
         <div className="relative inline-block">
-          <h1 className="text-8xl text-white font-bold font-impact tracking-wide px-6 py-2 max-md:text-4xl whitespace-nowrap"
-              style={{
-                textShadow: `
+          <h1
+            className="text-8xl text-white font-bold font-impact tracking-wide px-6 py-2 max-md:text-4xl whitespace-nowrap"
+            style={{
+              textShadow: `
                   -5px -5px 0 #000,
                   5px -5px 0 #000,
                   -5px 5px 0 #000,
@@ -55,7 +70,8 @@ function WallOfMeme() {
                   -5px 0 0 #000,
                   5px 0 0 #000
                 `,
-              }}>
+            }}
+          >
             WALL OF MEME
           </h1>
         </div>
@@ -83,7 +99,7 @@ function WallOfMeme() {
           </button>
 
           <div className="overflow-hidden  w-full  flex justify-center">
-            <div 
+            <div
               className="transition-all duration-300 ease-out transform"
               style={{
                 transform: `scale(${isAnimating ? 0.7 : 1})`,
@@ -108,7 +124,7 @@ function WallOfMeme() {
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-white scale-125' : 'bg-white/30'
+                index === currentIndex ? "bg-white scale-125" : "bg-white/30"
               }`}
               onClick={() => {
                 if (!isAnimating) {

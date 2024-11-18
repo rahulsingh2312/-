@@ -17,21 +17,21 @@ export default function Matrix() {
               target="_blank"
               href="https://x.com/i/communities/1854412179182645683"
             >
-              <TokenIcon src="/x2.png" />
+              <TokenIcon src="/x2.webp" />
             </a>
             <a target="_blank" href="https://t.me/YENonSol">
-              <TokenIcon src="/t2.png" />
+              <TokenIcon src="/t2.webp" />
             </a>
           </div>
         </div>
         <img
-          src="/stoptrading.png"
+          src="/stoptrading.webp"
           className="select-none max-md:hidden -z-10"
           draggable="false"
           alt=""
         />
         <img
-          src="/stoptradingmd.png"
+          src="/stoptradingmd.webp"
           className="select-none md:hidden w-full -z-10"
           draggable="false"
           alt=""
