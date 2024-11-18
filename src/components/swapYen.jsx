@@ -90,6 +90,7 @@ const SwapYen = ({ isDarkMode = true }) => {
     try {
       await executeSwap(swapAmount);
       if (swapResult?.status === 'success') {
+        setSwapAmount(0);
         alert('Swap successful!');
       }
     } catch (err) {
