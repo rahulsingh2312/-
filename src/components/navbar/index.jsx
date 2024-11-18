@@ -24,6 +24,10 @@ const Navbar = () => {
       </div>
       <div className="flex gap-2 md:gap-3.5">
         <div className="flex gap-1.5 md:gap-2.5 items-center">
+          
+        <a target="_blank" href="https://jup.ag/swap/SOL-8HfFvgutvKBjdbTqm8h6qZ2VSJ3TxwrZxHT3m34Cpump">
+            <TokenIcon src="https://jup.ag/svg/jupiter-logo.svg" />
+          </a>
           <a target="_blank" href="https://t.me/YENonSol">
             <TokenIcon src="/t2.webp" />
           </a>
