@@ -1,13 +1,11 @@
 todo
 
-1- cutedog section , alignment fixes
-2- border image in mobile view corousel
-3- optimizing images
-4- seo
+1- Add a jup link , dex link in navbar 
+2- Google for Meme Images
 
-deadline for top 4 tomorrow 
-6- design a tshirt for x images.
 
-5- building a firebase attached form to fetch json of images lets do base 64 , smth last step of product 
+
+2- design a tshirt for x images.
+
 
 
