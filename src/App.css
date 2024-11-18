@@ -1,0 +1,7 @@
+.NewMatrix {
+  background-image: url("/public/stoptrading.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 75vh;
+}
