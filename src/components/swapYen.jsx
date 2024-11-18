@@ -9,7 +9,7 @@ import { Connection, LAMPORTS_PER_SOL } from '@solana/web3.js';
 
 const SwapYen = ({ isDarkMode = true }) => {
   const connection = new Connection(
-    'https://mainnet.helius-rpc.com/?api-key=215399cd-1d50-4bdf-8637-021503ae6ef3',
+    'https://api.mainnet-beta.solana.com',
     "confirmed"
   );
   const { connected: walletConnected, publicKey, wallet } = useWallet();
