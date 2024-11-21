@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
 const NFTMinter = () => {
+
+    const loaderMessages = [
+        'Gathering data 💹...',
+        'Almost there 💹💹💹 ...',
+        "If you move, you're Gay 💹💹💹💹💹.",
+        'DONE ✅',
+      ];
+
+
   const [prompt, setPrompt] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [minted, setMinted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [loaderMessage, setLoaderMessage] = useState('');
+
 
   useEffect(() => {
     // Check if the user has already minted an NFT and retrieve the image URL
@@ -16,11 +27,25 @@ const NFTMinter = () => {
       setImageUrl(storedImageUrl);
     }
   }, []);
+useEffect(() => {
+    let messageIndex = 0;
+    let interval;
+
+    if (loading) {
+      setLoaderMessage(loaderMessages[messageIndex]);
+      interval = setInterval(() => {
+        messageIndex = (messageIndex + 1) % loaderMessages.length;
+        setLoaderMessage(loaderMessages[messageIndex]);
+      }, 7000);
+    }
+
+    return () => clearInterval(interval);
+  }, [loading]);
 
   const usedPrompts = []; // Use a backend or context to persist this data in real use.
 
   const generatePrompt = () => {
-    const basePrompt = 'cute anime girl with green eyes';
+    const basePrompt = 'cute anime girl with green eyes and Green hair and a green theme';
     const variations = [
       'wearing a red dress',
       'holding a cat',
@@ -110,9 +135,10 @@ const NFTMinter = () => {
 
       {loading && (
         <div className="loading">
-          <p>💹 Generating NFT Might Take a Min or Two...</p>
+          <p>{loaderMessage}</p>
         </div>
       )}
+
 
       {imageUrl && (
         <div className="nft-preview">
