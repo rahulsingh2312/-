@@ -110,7 +110,7 @@ const NFTMinter = () => {
 
       {loading && (
         <div className="loading">
-          <p>💹 Generating NFT...</p>
+          <p>💹 Generating NFT Might Take a Min or Two...</p>
         </div>
       )}
 
