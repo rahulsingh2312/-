@@ -16,14 +16,21 @@
     "@solana/web3.js": "^1.95.4",
     "@tiplink/wallet-adapter": "^2.1.21",
     "@tiplink/wallet-adapter-react-ui": "^1.0.0",
+    "axios": "^1.7.8",
     "buffer": "^6.0.3",
+    "face-api.js": "^0.22.2",
     "google-auth-library": "^9.15.0",
     "google-spreadsheet": "^4.1.4",
+    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.460.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.3.0"
+    "react-dropzone": "^14.3.5",
+    "react-icons": "^5.3.0",
+    "shadcn": "^2.1.6",
+    "shadcn-ui": "^0.9.3",
+    "wget": "^0.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

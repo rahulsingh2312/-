@@ -8,7 +8,7 @@ import ActualFooter from "./components/ActualFooter";
 import Navbar from "./components/navbar";
 import "./App.css";
 import NFTMinter from "./components/pfpgenerator/page";
-
+import EmojiEyeReplacer from "./components/eyesconvertor/page.tsx";
 function App() {
 
   return (
@@ -16,8 +16,10 @@ function App() {
       <RainbowMountain />
       <Matrix />
       <SwapYen />
+      <EmojiEyeReplacer />
       <NFTMinter />
       <WallOfMeme />
+
      {/* Community Cult Badge */}
 <div className="px-6 my-10 py-1 text-xl barrio-regular rounded-full border border-gray-500 mx-auto text-center z-10 bg-white/20 backdrop-blur-sm w-fit flex items-center gap-2">
   <span className="line-through">Community</span> Cult of
