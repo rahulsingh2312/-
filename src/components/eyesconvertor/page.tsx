@@ -296,7 +296,15 @@ const EmojiEyeReplacer: React.FC = () => {
         accept="image/*" 
         className="mb-4"
       />
-
+   {!modelsLoaded && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="text-white text-center">
+            <div className="animate-spin w-16 h-16 border-4 border-t-4 border-t-yellow-500 border-white rounded-full mx-auto mb-4"></div>
+            <p className="text-xl">Loading AI models to find your eyes...</p>
+            <p className="text-sm text-gray-300 mt-2">This might take a moment</p>
+          </div>
+        </div>
+      )}
 
 
       {image && (
@@ -338,13 +346,10 @@ const EmojiEyeReplacer: React.FC = () => {
 
       {/* Download Button */}
       {image && faceDetected && (
-        <div className="mt-4 text-center">
-          <button 
-            onClick={handleDownload}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Download Image
-          </button>
+        <div className="mt-4 text-center bg-yellow-100  border border-yellow-300 p-3 rounded">
+          <p className="text-yellow-800">
+            💡 To save the image, use your device's screenshot function.
+          </p>
         </div>
       )}
     </div>
